@@ -57,6 +57,10 @@ namespace ECommerceSFA.ProductCatalog
 
             await productRepository.AddProduct(prod1);
             Console.WriteLine("added product");
+
+            IEnumerable<Product> allProducts = await productRepository.GetAllProducts();
+
+            Console.WriteLine("all products are retrivable");
         }
     }
 }
